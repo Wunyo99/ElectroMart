@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+
+/* .section-padding {
+  @apply py-7.5 sm:py-10 md:py-15 lg:py-20 xl:py-25 px-6 md:px-16 lg:px-24;
+} */
+
+#global-loader {
+  position: fixed;        /* Stay on top of everything */
+  top: 0;
+  left: 0;
+  width: 100vw;           /* Full width */
+  height: 100vh;          /* Full height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  background-color: white; /* Or your app background */
+  z-index: 9999;           /* On top of all content */
+  font-size: 24px;
+  font-weight: bold;
+}
