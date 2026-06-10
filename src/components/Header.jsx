@@ -129,13 +129,23 @@ const Header = () => {
 
         {isMenuOpen && (
           <div className="mt-5">
-            <button
-              className="flex gap-2 items-center rounded-full hover:bg-[#f1f5f9] py-2 px-4 cursor-pointer"
-              onClick={user ? logoutNavigateSignIn : navigateSignIn}
-            >
-              {user ? <LogOut size={18} /> : <LogIn size={18} />}
-              <span className="text-sm">{user ? "Log Out" : "Sign In"}</span>
-            </button>
+            {user ? (
+              <a
+                className="flex gap-2 items-center rounded-full hover:bg-[#f1f5f9] py-2 px-4 cursor-pointer"
+                href="/profile"
+              >
+                <User2 size={18} />
+                <span className="text-sm">Profile</span>
+              </a>
+            ) : (
+              <button
+                className="flex gap-2 items-center rounded-full hover:bg-[#f1f5f9] py-2 px-4 cursor-pointer"
+                onClick={navigateSignIn}
+              >
+                <LogIn size={18} />
+                <span className="text-sm">Sign In</span>
+              </button>
+            )}
             <nav className="flex flex-col gap-4 py-4 mt-2">
               {categories.map((cat) => (
                 <Link
