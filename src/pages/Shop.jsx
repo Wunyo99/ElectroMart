@@ -203,7 +203,7 @@ const Shop = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-7"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"
           >
             {filteredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
